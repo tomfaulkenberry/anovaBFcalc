@@ -1,0 +1,12 @@
+name: anovaBFcalc
+title: anovaBFcalc
+username:
+account: tomfaulkenberry
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 928641
+bundleId: 2082853
+url: https://tomfaulkenberry.shinyapps.io/anovaBFcalc/
+when: 1557834392.89018
+asMultiple: FALSE
+asStatic: FALSE
