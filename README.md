@@ -31,6 +31,7 @@ anovaBFcalc::anovaBFcalc()
 #### 2\. shinyapps.io version (Standard version)
 
 If you want to use the standard version of `anovaBFcalc`, installation is
-not required. The application is already deployed on the **shinyapps.io** server.
+not required. The application is already deployed on the **shinyapps.io** server, 
+and can be found at the following link: https://tomfaulkenberry.shinyapps.io/anovaBFcalc/
 
 
