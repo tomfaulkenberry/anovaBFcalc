@@ -1,4 +1,3 @@
 language: r
-r: plotrix
 sudo: false
 cache: packages
