@@ -6,10 +6,10 @@ shinyServer(function(input, output) {
   
   observe({
     if (input$repeated == "bet"){
-      values$BF01 <- bf_bic(F=input$F, df1=input$df1, df2=input$df2, repeated=FALSE, report.as="BF01")
+      values$BF01 <- anovaBFcalc::bf_bic(F=input$F, df1=input$df1, df2=input$df2, repeated=FALSE, report.as="BF01")
     }
     else {
-      values$BF01 <- bf_bic(F=input$F, df1=input$df1, df2=input$df2, repeated=TRUE, report.as="BF01")
+      values$BF01 <- anovaBFcalc::bf_bic(F=input$F, df1=input$df1, df2=input$df2, repeated=TRUE, report.as="BF01")
     }
     values$pOdds = input$pH0/(1-input$pH0)
   })
