@@ -1,4 +1,3 @@
-
 shinyServer(function(input, output) { 
   
   # get input and calculate Bayes factor
@@ -7,15 +6,11 @@ shinyServer(function(input, output) {
   
   observe({
     if (input$repeated == "bet"){
-      values$N <- input$df1 + input$df2 + 1
-      values$BF01 <- sqrt(values$N^(input$df1)*(1+input$F*input$df1/input$df2)^(-values$N))
+      values$BF01 <- bf_bic(F=input$F, df1=input$df1, df2=input$df2, repeated=FALSE, report.as="BF01")
     }
     else {
-      values$k <- input$df1 + 1
-      values$n <- (input$df2 + input$df1)/input$df1 
-      values$BF01 <- sqrt((values$n*values$k-values$n)^(values$k-1)*(1+input$F/(values$n-1))^(values$n-values$n*values$k))
+      values$BF01 <- bf_bic(F=input$F, df1=input$df1, df2=input$df2, repeated=TRUE, report.as="BF01")
     }
-    
     values$pOdds = input$pH0/(1-input$pH0)
   })
   
@@ -25,7 +20,6 @@ shinyServer(function(input, output) {
   # Output 1 - bayes factor "pizza" plot
   output$pizza <- renderPlot({
  
-    library(plotrix)
     xPos = 0.25
     yPos = 0.75
     radius = 0.12
@@ -36,7 +30,6 @@ shinyServer(function(input, output) {
     text(xPos, yPos+1.2*radius, "data|H0", cex=1.5, font=2)
     text(xPos, yPos-1.22*radius, "data|H1", cex=1.5, font=2)
     },
-    
     width=800,
     height=800
     )
