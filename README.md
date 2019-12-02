@@ -1,6 +1,6 @@
 # ANOVA Bayes Factor Calculator
 
-![travis badge](https://travis-ci.org/tomfaulkenberry/anovaBFcalc.svg?branch=master)
+[![Build Status](https://travis-ci.org/tomfaulkenberry/anovaBFcalc.svg?branch=master)](https://travis-ci.org/tomfaulkenberry/anovaBFcalc)
 
 `anovaBFcalc` is a Shiny app that is designed to calculate Bayes factors from minimal ANOVA summary statistics (i.e., the F statistic and the degrees of freedom of the test).  Its use is described in the paper "Estimating evidential value from ANOVA summaries: A comment on Ly et al. (2018)", published in *Advances in Methods and Practices in Psychological Science*. 
 
